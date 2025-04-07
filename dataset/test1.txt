@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 asd asd asd
+=======
+asd
+naber lo
+>>>>>>> 4e1c7602cac66e836a3c7b8e86a9c963d62b3c5c
