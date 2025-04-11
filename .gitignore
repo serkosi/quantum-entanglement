@@ -1,0 +1,8 @@
+# this is an .gitignore file that ignores local project files and 
+# directories that are commonly not needed in a git repository
+
+## ignore python bytecode files
+__pycache__/
+
+## ignore local python environment
+.venv

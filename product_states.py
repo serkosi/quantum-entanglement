@@ -18,9 +18,11 @@ def generate_product_state(n):
         state = np.kron(state, qubit_state)  # Tensor product with the previous state
     return state
 
-# Example: Generate a 3-qubit product state
-n_qubits = 3
-product_state = generate_product_state(n_qubits)
+# Ensure this code runs only when the script is executed directly
+if __name__ == "__main__":
+    # Example: Generate a 3-qubit product state
+    n_qubits = 3
+    product_state = generate_product_state(n_qubits)
 
-# Display the generated state
-print("Generated Product State:", product_state)
+    # Display the generated state
+    print("Generated Product State:", product_state)
