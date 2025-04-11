@@ -1,5 +1,31 @@
 # Our Project (Name: TBD)
 
+## Quick Start
+
+To execute the project from the VSCode terminal, follow these steps:
+
+1. **Install Dependencies**:
+   - Before running the project, ensure all required dependencies are installed. Run the following command:
+     ```sh
+     pip install -r requirements.txt
+     ```
+
+2. **Run the Script**:
+   - Execute any script of your chioce in the project using Python such as:
+     ```sh
+     python product_states.py  # Contains functions to generate and manipulate product states
+     python run.py  # Generates random quantum product states and saves them to a file
+     python data_preprocessing.py  # Preprocesses classical or quantum datasets
+     python comb_sum.py  # Computes combinations and their sums for quantum state analysis
+     python entanglement_analysis.py  # Analyzes quantum entanglement in datasets
+     python train_qnn.py  # Trains a Quantum Neural Network (QNN)
+     ```
+
+3. **View the Output**:
+   - The output of the script will be displayed in the terminal. Any generated files (e.g., data files) will be saved in the appropriate directories as specified in the code.
+
+## Project
+
 In Quantum Machine Learning (QML) research, classical datasets are often used to benchmark quantum models. Some of the most common classical datasets include: MNIST, Iris, Dogs vs. Cats, and ProteinNet.
 
 These datasets are typically encoded into quantum states using embedding schemes, which map classical data into quantum representations. However, [it is argueable that classical datasets may not lead to quantum advantage and using quantum datasets might be promising](https://arxiv.org/pdf/2109.03400) instead.
@@ -25,7 +51,7 @@ Understanding the initial input states is crucial. Here's a breakdown:
 
 In the paper, the authors mention using these states (they preffered Product States sampling) as input to their **Quantum Neural Network (QNN)**. The **QNN** then transforms these simple, non-entangled states into more complex quantum states with specific entanglement properties, forming the **NTangled dataset**.
 
-## Generating Product States
+### Generating Product States
 Algorithmically creating random product states for an **𝑛-qubit system** is implemented in the [`product_states.py`](product_states.py) file.
 
 Each qubit can be in a random superposition state like $𝛼|0⟩ + 𝛽|1⟩$, where $|𝛼|^2 + |𝛽|^2 = 1$.
@@ -36,7 +62,26 @@ Each qubit can be in a random superposition state like $𝛼|0⟩ + 𝛽|1⟩$, 
 
 3. One can specify the number of qubits (**n_qubits**) to generate the product state.
 
-## Quantum Entanglement
+The [`run.py`](./run.py) script is responsible for generating random quantum product states and saving them to a file. Here's how it works:
+
+1. **Imports the `product_states` Module**:
+   - The script uses the `generate_product_state` function from the [`product_states.py`](product_states.py) file to create random product states.
+
+2. **Defines Output File and Parameters**:
+   - The generated product states are saved to `data/product_states.txt`.
+   - The script generates 10 product states, each consisting of 3 qubits.
+
+3. **Generates and Saves Product States**:
+   - For each product state, the script:
+     - Calls `generate_product_state` to create a random product state.
+     - Writes the state to the output file in a space-separated format.
+
+4. **Prints a Confirmation Message**:
+   - After generating and saving the states, the script prints a message indicating the number of states written and the file location.
+
+This functionality is useful for creating quantum datasets composed of product states, which can be used in quantum computing experiments or simulations.
+
+### Quantum Entanglement
 
 [**Authors' Dataset**](https://github.com/LSchatzki/NTangled_Datasets) consists of quantum states with varying degrees and types of multipartite entanglement.
 
@@ -51,7 +96,7 @@ The dataset contains numerical data (e.g., **entanglement measures**, circuit pa
 
 By applying classical ML, we can uncover patterns, perform dimensionality reduction, or even predict physical properties that relate to the underlying physics phenomena.
 
-### Approach for a Classical ML Project
+## Approach for a Classical ML Project
 
 1. Data Preprocessing:
     - Load the dataset using NumPy or Pandas.
