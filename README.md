@@ -14,7 +14,7 @@ To execute the project from the VSCode terminal, follow these steps:
    - Execute any script of your chioce in the project using Python such as:
      ```sh
      python product_states.py  # Contains functions to generate and manipulate product states
-     python run.py  # Generates random quantum product states and saves them to a file
+     python data_generation.py  # Generates random quantum product states and saves them to a file
      python data_preprocessing.py  # Preprocesses classical or quantum datasets
      python comb_sum.py  # Computes combinations and their sums for quantum state analysis
      python entanglement_analysis.py  # Analyzes quantum entanglement in datasets
@@ -62,7 +62,7 @@ Each qubit can be in a random superposition state like $𝛼|0⟩ + 𝛽|1⟩$, 
 
 3. One can specify the number of qubits (**n_qubits**) to generate the product state.
 
-The [`run.py`](./run.py) script is responsible for generating random quantum product states and saving them to a file. Here's how it works:
+The [`data_generation.py`](./data_generation.py) script is responsible for generating random quantum product states and saving them to a file. Here's how it works:
 
 1. **Imports the `product_states` Module**:
    - The script uses the `generate_product_state` function from the [`product_states.py`](product_states.py) file to create random product states.
