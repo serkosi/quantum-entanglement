@@ -1,7 +1,6 @@
 import pennylane as qml
 import numpy as np
-
-n_qubits = 3 # Number of qubits
+from data_generation import output_file, n_qubits, num_layers, epochs
 
 # Set up the quantum device
 dev = qml.device("default.qubit", wires=n_qubits)
@@ -33,19 +32,16 @@ def load_product_states(filepath):
     return states
 
 # Load product states from the data file.
-output_file = "data/product_states.txt"
 product_states = load_product_states(output_file)
 
 # For demonstration, assign random binary labels to each product state.
 labels = np.random.choice([0, 1], size=len(product_states))
 
 # Initialize variational parameters for the circuit.
-num_layers = 3  # Example number of layers.
-params = np.random.randn(num_layers, n_qubits)
+params = qml.numpy.random.randn(num_layers, n_qubits)
 
 # Set up an optimizer and define the number of training epochs.
 opt = qml.GradientDescentOptimizer(stepsize=0.1)
-epochs = 50
 
 # Training loop: Update the parameters to minimize a simple mean-squared error loss.
 for epoch in range(epochs):

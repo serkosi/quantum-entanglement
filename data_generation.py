@@ -1,11 +1,11 @@
 import product_states as ps
 
-# File to store the generated product states
+# Centralized parameters for the project
 output_file = "data/product_states.txt"
-
-# Number of product states to generate
 num_states = 10
-n_qubits = 3  # Number of qubits per product state
+n_qubits = 4
+num_layers = 5  # Example number of layers for training
+epochs = 50
 
 # Generate and save product states
 with open(output_file, "w") as file:
