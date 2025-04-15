@@ -115,3 +115,28 @@ By applying classical ML, we can uncover patterns, perform dimensionality reduct
     - Plot feature distributions, decision boundaries, or **PCA** projections to gain insights.
     - Compare results across different **ansatzes** or parameter settings.
 
+## Some Outlook Points to Shape the Project
+
+Many researchers in the field believe that quantum machine learning (QML) methods have the potential to perform significantly better when modeling and analyzing complex systems.
+
+1. **Exploitation of Quantum Phenomena** 
+    
+    QML methods are designed based on principles like superposition, entanglement, and interference. These quantum properties allow QML algorithms to represent, encode, and process information in a feature space that could naturally capture the rich, nontrivial correlations found in complex physical, chemical, and even biological systems. The idea is that, for data that stem from or resemble quantum phenomena, a quantum-inspired feature map can capture the subtle interactions and structure much more efficiently than classical representations.
+
+2. **Enhanced Representational Power** 
+    
+    Conventional machine learning methods typically represent data in a high-dimensional classical space, but they are limited by the type of correlations they can efficiently handle. In contrast, QML methods—such as those that utilize quantum kernel methods or quantum neural networks—can sometimes embed data into exponentially large Hilbert spaces. This embedding can potentially offer a compressed yet highly expressive representation, especially useful when the underlying system is itself complex. If the essential structure of the data lies in a low-dimensional subspace of a much larger quantum space, then a QML approach might achieve better generalization with fewer samples.
+
+3. **Addressing Intractable Problems** 
+    
+    Complex systems, by nature, often involve exponentially many configurations or interactions. Traditional classical methods can be overwhelmed by this complexity, leading to issues like intractable optimization problems or an explosion in computational resources. Quantum machine learning methods are seen as promising in this regard because they can—in theory—handle certain classes of problems more naturally. For instance, quantum algorithms have been shown to offer advantages in simulating quantum many-body systems or solving optimization problems that are otherwise extremely challenging for classical computers.
+
+4. **Emerging Theoretical and Numerical Evidence** 
+    
+    The numerical studies described in the supplement illustrate that by carefully managing factors like model complexity, effective dimensionality, and regularization, one can achieve prediction error bounds that scale favorably with the amount of data. These results suggest that when classical data is encoded into quantum states using circuits like separable rotations or IQP-type embeddings, the learning structure might inherently align with the complex nature of the data, potentially providing a computational edge over classical methods. Although these results are primarily theoretical and validated through simulations, they fuel optimism about the prospect for QML methods to excel in practical scenarios involving complex systems.
+
+5. **Practical Outlook and Challenges** 
+
+    While the theoretical foundations and initial numerical experiments are promising, it’s important to note that QML is still in its early stages. The quantum advantage for machine learning on complex systems remains an active topic of research, with practical demonstrations reliant on the refinement of quantum hardware and error-correction methods. Nonetheless, the potential to capture and exploit complex correlations in data that are inherently quantum-mechanical or derived from highly non-linear processes keeps the research community excited.
+
+There is a growing optimism that the methods inspired by quantum physics can yield more efficient and powerful algorithms when dealing with complex systems. These methods are being developed not only to match classical performance but also to surpass it in regimes where the structure of the data benefits from a quantum-mechanical perspective. Researchers envision applications ranging from quantum chemistry and drug discovery to optimization in finance and logistics, where classical methods currently struggle due to the sheer complexity of the underlying processes.
