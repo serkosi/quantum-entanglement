@@ -6,3 +6,6 @@ __pycache__/
 
 ## ignore local python environment
 .venv
+
+## study materials
+materials/
